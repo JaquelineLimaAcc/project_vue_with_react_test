@@ -2,17 +2,16 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:15-alpine
-    container_name: postgres_db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql_db
     restart: always
     environment:
-      POSTGRES_USER: bpi_user
-      POSTGRES_PASSWORD: very_strong_password
-      POSTGRES_DB: app_db
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: 'dev_password_!2024'
     ports:
-      - "5432:5432"
+      - "1433:1433"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - mssql_data:/var/opt/mssql
 
   adminer:
     image: adminer
@@ -22,6 +21,26 @@ services:
       - "8080:8080"
     depends_on:
       - db
+
+  artifactory:
+    image: releases-docker.jfrog.io/jfrog/artifactory-oss:7.77.3
+    container_name: artifactory
+    restart: always
+    environment:
+      - JF_ROUTER_ENTRY_POINTS_EXTERNAL_URL=http://localhost:8081
+    ports:
+      - "8081:8081"
+      - "8082:8082"
+    volumes:
+      - artifactory_data:/var/opt/jfrog/artifactory
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/artifactory/api/system/ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
 
   frontend:
     build:
@@ -50,4 +69,5 @@ services:
       - db
 
 volumes:
-  postgres_data:
+  mssql_data:
+  artifactory_data:
