@@ -58,7 +58,7 @@ services:
   backend:
     build: ./backend
     environment:
-      POSTGRES_USER: bpi_user
+      POSTGRES_USER: dev_user
       POSTGRES_PASSWORD: very_strong_password
       POSTGRES_DB: app_db
       POSTGRES_HOST: postgres_db
