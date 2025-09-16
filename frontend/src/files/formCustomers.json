@@ -1,0 +1,142 @@
+[
+  {
+    "Id": 0,
+    "AccountHolderName": "Sofia Martins",
+    "AccountNumber": "PT50003501231234567890159",
+    "Balance": 15400,
+    "BankName": "Banco BPI"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "João Fernandes",
+    "AccountNumber": "PT50003509876543210987654",
+    "Balance": 8732,
+    "BankName": "Novo Banco"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Inês Almeida",
+    "AccountNumber": "PT50003502345678901234567",
+    "Balance": 20150,
+    "BankName": "Caixa Geral de Depósitos"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Miguel Costa",
+    "AccountNumber": "PT50003507654321098765432",
+    "Balance": 4220,
+    "BankName": "Banco Santander Totta"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Ana Ribeiro",
+    "AccountNumber": "PT50003501239876543210987",
+    "Balance": 11000,
+    "BankName": "Banco Montepio"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Ricardo Silva",
+    "AccountNumber": "PT50003504321098765432100",
+    "Balance": 6500,
+    "BankName": "Banco BPI"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Mariana Lopes",
+    "AccountNumber": "PT50003505432123456789012",
+    "Balance": 18900,
+    "BankName": "ActivoBank"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Tiago Santos",
+    "AccountNumber": "PT50003501234567891234567",
+    "Balance": 7200,
+    "BankName": "Bankinter"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Beatriz Carvalho",
+    "AccountNumber": "PT50003506789012345678901",
+    "Balance": 13500,
+    "BankName": "Caixa Agrícola"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Pedro Rocha",
+    "AccountNumber": "PT50003509876123456789012",
+    "Balance": 9800,
+    "BankName": "Banco BIC"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Carolina Ferreira",
+    "AccountNumber": "PT50003508765432109876543",
+    "Balance": 17400,
+    "BankName": "Banco BPI"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "André Gomes",
+    "AccountNumber": "PT50003507654321987654321",
+    "Balance": 8100,
+    "BankName": "Banco Santander Totta"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Daniela Marques",
+    "AccountNumber": "PT50003504561234567890123",
+    "Balance": 14800,
+    "BankName": "Caixa Geral de Depósitos"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Rafael Nunes",
+    "AccountNumber": "PT50003503210987654321098",
+    "Balance": 6000,
+    "BankName": "Banco Montepio"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Luísa Pinto",
+    "AccountNumber": "PT50003502123456789012345",
+    "Balance": 22000,
+    "BankName": "Novo Banco"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Bruno Teixeira",
+    "AccountNumber": "PT50003503456789012345678",
+    "Balance": 9200,
+    "BankName": "ActivoBank"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Catarina Sousa",
+    "AccountNumber": "PT50003504321098765012345",
+    "Balance": 7800,
+    "BankName": "Bankinter"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Diogo Mendes",
+    "AccountNumber": "PT50003505678901234567890",
+    "Balance": 13000,
+    "BankName": "Caixa Agrícola"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Filipa Correia",
+    "AccountNumber": "PT50003506543210987654321",
+    "Balance": 14200,
+    "BankName": "Banco BIC"
+  },
+  {
+    "Id": 0,
+    "AccountHolderName": "Gonçalo Barbosa",
+    "AccountNumber": "PT50003507890123456789012",
+    "Balance": 11800,
+    "BankName": "Banco BPI"
+  }
+]
