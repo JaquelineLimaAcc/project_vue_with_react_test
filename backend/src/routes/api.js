@@ -5,10 +5,10 @@ const router = express.Router();
 
 router.get('/customers', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM Customers');
-    res.json(result.rows);
+    const result = await pool.request().query('SELECT * FROM Customers');
+    res.json(result.recordset);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "DB error", details: err.message });
   }
 });
 

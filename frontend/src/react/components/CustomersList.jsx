@@ -25,7 +25,7 @@ function CustomersList() {
       <h2>Lista de Clientes</h2>
       <ul>
         {customers.map((customer) => (
-          <li key={customer.id}>{customer.name}</li>
+          <li key={customer.Id}>{customer.AccountHolderName}</li>
         ))}
       </ul>
     </div>
