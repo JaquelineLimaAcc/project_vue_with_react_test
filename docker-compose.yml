@@ -58,10 +58,11 @@ services:
   backend:
     build: ./backend
     environment:
-      POSTGRES_USER: dev_user
-      POSTGRES_PASSWORD: very_strong_password
-      POSTGRES_DB: app_db
-      POSTGRES_HOST: postgres_db
+      MS_USER: sa
+      MS_PASSWORD: dev_password_!2024
+      MS_DB: app_db
+      MS_HOST: localhost
+      MS_PORT: 1433
       PORT: 4000
     ports:
       - "4000:4000"
