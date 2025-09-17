@@ -1,0 +1,22 @@
+.button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.button.getJson {
+  background-color: #4CAF50;
+}
+
+.button.postJson {
+  background-color: #2196F3;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
