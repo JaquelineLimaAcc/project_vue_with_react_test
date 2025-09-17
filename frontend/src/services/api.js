@@ -9,7 +9,7 @@ export async function fetchCustomers() {
 // Artifactory
 // GET
 export async function getJsonFromBackend() {
-  const res = await fetch(`${API_URL}/api/get-json`);");
+  const res = await fetch(`${API_URL}/api/get-json`);
   if (!res.ok) throw new Error("Erro no GET");
   return res.json();
 }
