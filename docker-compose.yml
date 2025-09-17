@@ -34,7 +34,7 @@ services:
     container_name: artifactory
     restart: always
     environment:
-      - JF_ROUTER_ENTRY_POINTS_EXTERNAL_URL=http://localhost:8081
+      - JF_ROUTER_ENTRY_POINTS_EXTERNAL_URL=http://localhost:8081      
     ports:
       - "8081:8081"
       - "8082:8082"
@@ -71,7 +71,11 @@ services:
       MS_DB: app_db
       MS_HOST: db
       MS_PORT: 1433
-      PORT: 4000
+      ARTIFACTORY_BASE_URL: http://localhost:8081/artifactory
+      ARTIFACTORY_USERNAME: admin
+      ARTIFACTORY_PASSWORD: jq11Art129#@
+      ARTIFACTORY_DEFAULT_REPO: generic-local
+      PORT: 4000      
     ports:
       - "4000:4000"
     depends_on:
