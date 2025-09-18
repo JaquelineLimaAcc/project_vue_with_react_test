@@ -9,14 +9,14 @@ export async function fetchCustomers() {
 // Artifactory
 // GET
 export async function getJsonFromBackend() {
-  const res = await fetch(`${API_URL}/api/get-json`);
+  const res = await fetch(`${API_URL}/artifactory/get-json`);
   if (!res.ok) throw new Error("Erro no GET");
   return res.json();
 }
 
 // POST
 export async function postJsonToBackend(jsonData) {
-  const res = await fetch(`${API_URL}/api/upload-json`, {
+  const res = await fetch(`${API_URL}/artifactory/upload-json`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(jsonData)

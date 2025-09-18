@@ -34,7 +34,7 @@ services:
     container_name: artifactory
     restart: always
     environment:
-      - JF_ROUTER_ENTRY_POINTS_EXTERNAL_URL=http://localhost:8081      
+      - JF_ROUTER_ENTRY_POINTS_EXTERNAL_URL=http://localhost:8081 
     ports:
       - "8081:8081"
       - "8082:8082"
@@ -71,9 +71,10 @@ services:
       MS_DB: app_db
       MS_HOST: db
       MS_PORT: 1433
-      ARTIFACTORY_BASE_URL: http://localhost:8081/artifactory
+      ARTIFACTORY_BASE_URL: http://artifactory:8081/artifactory
+      ARTIFACTORY_TOKEN: cmVmdGtuOjAxOjE3ODk3NTQ5ODU6WlJycGxHUXJoWlppZmlCU3k1SjFmWm83bjVB # É necessario criar um token no Artifactory e substituir aqui
       ARTIFACTORY_USERNAME: admin
-      ARTIFACTORY_PASSWORD: jq11Art129#@
+      ARTIFACTORY_PASSWORD: jq11Art129#@ # Coloque aqui a sua senha do Artifactory
       ARTIFACTORY_DEFAULT_REPO: generic-local
       PORT: 4000      
     ports:

@@ -1,25 +1,23 @@
-const axios = require('axios');
-const fs = require('fs');
+import axios from 'axios';
+import fs from 'fs';
 
 const ARTIFACTORY_URL = process.env.ARTIFACTORY_BASE_URL;
 const USERNAME = process.env.ARTIFACTORY_USERNAME;
 const PASSWORD = process.env.ARTIFACTORY_PASSWORD;
-const DEFAULT_REPO = process.env.ARTIFACTORY_DEFAULT_REPO;
+const REPO_PATH = process.env.ARTIFACTORY_DEFAULT_REPO + '/formCustomers.json';
+const ARTIFACTORY_TOKEN = process.env.ARTIFACTORY_TOKEN;
 
 // Função recebe caminho do arquivo local e caminho alvo no artifactory
-async function uploadJsonToArtifactory(localFilePath, repoPath = DEFAULT_REPO) {
-  const jsonData = fs.readFileSync(localFilePath);
-
+export async function uploadJsonToArtifactory(jsonData) {
   const response = await axios.put(
-    `${ARTIFACTORY_URL}/${repoPath}`,
-    jsonData,
+    `${ARTIFACTORY_URL}/${REPO_PATH}`,
+    JSON.stringify(jsonData),
     {
-      auth: { username: USERNAME, password: PASSWORD },
-      headers: { 'Content-Type': 'application/json' }
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${ARTIFACTORY_TOKEN}`
+      }
     }
   );
-
   return response.data;
 }
-
-module.exports = { uploadJsonToArtifactory };
