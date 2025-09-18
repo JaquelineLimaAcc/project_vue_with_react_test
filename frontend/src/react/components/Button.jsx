@@ -4,6 +4,7 @@ import './Button.css';
 const CustomerJson = () => {
   const handlePost = () => {
     console.log('post data');
+    // test
   };
 
   const handleGet = () => {
