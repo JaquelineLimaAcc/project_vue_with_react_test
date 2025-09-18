@@ -72,7 +72,7 @@ services:
       MS_HOST: db
       MS_PORT: 1433
       ARTIFACTORY_BASE_URL: http://artifactory:8081/artifactory
-      ARTIFACTORY_TOKEN: cmVmdGtuOjAxOjE3ODk3NTQ5ODU6WlJycGxHUXJoWlppZmlCU3k1SjFmWm83bjVB # É necessario criar um token no Artifactory e substituir aqui
+      ARTIFACTORY_TOKEN: tokenhere123 # É necessario criar um token no Artifactory e substituir aqui
       ARTIFACTORY_USERNAME: admin
       ARTIFACTORY_PASSWORD: jq11Art129#@ # Coloque aqui a sua senha do Artifactory
       ARTIFACTORY_DEFAULT_REPO: generic-local
