@@ -4,6 +4,7 @@
   <div ref="reactByeRoot2"></div>
   <div ref="reactCustomersList"></div>
   <div ref="reactCustomersJson"></div>
+  <div ref="reactSaveJsonToMssql"></div>
 </template>
 
 <script setup>
@@ -13,6 +14,7 @@ import ReactIam from '@/react/components/IamReactComponent.jsx'
 import ReactBye from '@/react/components/ReactBye.jsx'
 import ReactCustomersList from '@/react/components/CustomersList.jsx'
 import ReactCustomersJson from '@/react/components/Button.jsx'
+import ReactSaveJsonToMssql from '@/react/components/saveJsonToMssql.jsx'
 
 const reactIamRoot = ref(null)
 
@@ -22,6 +24,8 @@ const reactByeRoot2 = ref(null)
 const reactCustomersList = ref(null)
 const reactCustomersJson = ref(null)
 
+const reactSaveJsonToMssql = ref(null)
+
 let IamInstance = null
 
 let ByeInstance1 = null
@@ -30,6 +34,8 @@ let ByeInstance2 = null
 let CustomersListInstance = null
 let CustomersJsonInstance = null
 
+let JsonToMssqlInstance = null
+
 onMounted(() => {
   IamInstance = mountReactComponent(ReactIam, reactIamRoot.value, { greatings: "Good afternoon", name: "Jaqueline", question: "How are you?" })
   ByeInstance1 = mountReactComponent(ReactBye, reactByeRoot1.value, { farewell: "See you later", name: "Jaqueline", reminder: "Don't forget to study Vue and React!" })
@@ -37,6 +43,8 @@ onMounted(() => {
 
   CustomersListInstance = mountReactComponent(ReactCustomersList, reactCustomersList.value, { })
   CustomersJsonInstance = mountReactComponent(ReactCustomersJson, reactCustomersJson.value, { })
+
+  JsonToMssqlInstance = mountReactComponent(ReactSaveJsonToMssql, reactSaveJsonToMssql.value, { })
 })
 
 onUnmounted(() => {
@@ -47,5 +55,7 @@ onUnmounted(() => {
 
   CustomersListInstance && CustomersListInstance.unmount()
   CustomersJsonInstance && CustomersJsonInstance.unmount()
+
+  JsonToMssqlInstance && JsonToMssqlInstance.unmount()
 })
 </script>

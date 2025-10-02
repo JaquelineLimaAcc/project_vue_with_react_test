@@ -24,3 +24,15 @@ export async function postJsonToBackend(jsonData) {
   if (!res.ok) throw new Error("Erro no POST");
   return res.json();
 }
+
+// MSSQL
+export async function saveJsonToMssql(jsonData) {
+  const res = await fetch(`${API_URL}/mssql/json-to-sql`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(jsonData)
+    
+  });
+  if (!res.ok) throw new Error("Erro ao salvar no MSSQL");
+  return res.json();
+}
